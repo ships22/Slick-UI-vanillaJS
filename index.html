@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>Slick_UI_VanillaJS</title>
+</head>
+<body>
+    <h1>Design for Slick A Js Animation</h1>
+<hr>
+    <p>With simplicity By <span>©Ships</span></p>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script>
+
+    (function(){
+        let grids = document.querySelectorAll('div');
+        let h1 = document.querySelector('h1');
+        let hr = document.querySelector('hr');
+        let p = document.querySelector('p');
+        let num = 0;
+        const delay = time => new Promise(resolve => setTimeout(resolve, time));
+        
+        const animation = function(){
+            grids.forEach(grid => {
+                delay(0).then(()=>{
+                    setTimeout(()=>{
+                        grid.style.backgroundColor = 'rgb(72, 178, 248)';
+                    }, num += 100);
+                });
+                delay(5500).then(()=>{
+                    setTimeout(()=>{
+                        grid.style.width = '0%';
+                    }, num += 600);
+                });
+            });
+        };
+        
+        const animH1 = function(){
+            delay(600).then(()=>{
+                setTimeout(()=>{
+                    h1.style.opacity = '1';
+                    h1.style.top = '20%';
+                }, num);
+            });
+           
+        }
+
+        const animHr = function(){
+            delay(600).then(()=>{
+                setTimeout(()=>{
+                    hr.style.top = '350px';
+                    hr.style.opacity = 1;
+                }, num);
+            });
+        }
+
+        const animP = function(){
+            delay(4000).then(()=>{
+                p.style.left = '10%'; 
+                p.style.opacity = '1';     
+            });
+        };
+
+    const start = function(){
+        animation();
+        animH1();
+        animHr();
+        animP();
+    };
+
+    window.addEventListener("DOMContentLoaded", start);
+
+    })();
+
+    </script>
+            
+</body>
+</html>
+
+
+
+
+
+       

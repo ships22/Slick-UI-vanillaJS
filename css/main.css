@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Major Mono Display', monospace;
+  overflow: hidden;
+  background: #A545F9;
+}
+
+section {
+  margin-top: -20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[10];
+      grid-template-columns: repeat(10, auto);
+}
+
+section div {
+  background-color: white;
+  height: 100vh;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+h1 {
+  font-size: 4em;
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+}
+
+p {
+  font-size: 3em;
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transition: 3.3s;
+  transition: 3.3s;
+  color: white;
+  left: 15%;
+  opacity: 0;
+  font-family: 'Poiret One', cursive;
+}
+
+span {
+  font-family: 'Sacramento', cursive;
+}
+
+hr {
+  position: relative;
+  top: 450px;
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+  opacity: 0;
+}
+/*# sourceMappingURL=main.css.map */
